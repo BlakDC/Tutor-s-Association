@@ -1,0 +1,274 @@
+/* === Global Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fffaf5;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Header === */
+header {
+  background-color: #ff7b00;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+
+/* === Navigation === */
+nav {
+  background-color: #ffa94d;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: #064e3b;
+  margin: 0 15px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #065f46;
+  text-decoration: underline;
+}
+
+/* === Main Container === */
+main {
+  flex: 1;
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* === Hero Section === */
+.hero {
+  background-color: #fff0e6;
+  padding: 50px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.hero h2 {
+  color: #ff7b00;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+/* === Cards (Nominees, Features, etc.) === */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card, .nominee-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover, .nominee-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.nominee-card h3 {
+  color: #ff7b00;
+  margin-bottom: 8px;
+}
+
+/* === Forms === */
+form {
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  max-width: 450px;
+  margin: 30px auto;
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff7b00;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* === Tables (Admin Page) === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+th {
+  background-color: #ff7b00;
+  color: white;
+  font-weight: 600;
+}
+
+tr:hover {
+  background-color: #fff2e0;
+}
+
+/* === Buttons === */
+button,
+input[type="submit"] {
+  background-color: #064e3b; /* dark green */
+  color: #ffffff; /* white text */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  font-weight: 600;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #065f46; /* slightly lighter dark green on hover */
+  transform: scale(1.03);
+}
+
+button:disabled,
+input[type="submit"]:disabled {
+  background-color: #3f3f3f; /* gray for disabled buttons */
+  color: #bfbfbf;
+  cursor: not-allowed;
+}
+
+/* === Links === */
+a {
+  color: #064e3b; /* dark green */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #065f46; /* slightly lighter green on hover */
+  text-decoration: underline;
+}
+
+/* === Footer === */
+footer {
+  background-color: #ff7b00;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 0.9em;
+  margin-top: auto;
+}
+
+/* === Utility Classes === */
+.text-center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.alert {
+  background-color: #ffe9d6;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-left: 5px solid #ff7b00;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  .hero {
+    padding: 30px 20px;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffa94d;
+  padding: 10px 20px;
+}
+
+.nav-left a, .nav-right a, .nav-right span {
+  color: #064e3b;
+  margin: 0 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-right span {
+  font-weight: 600;
+}
+
+.nav-right a:hover {
+  color: #065f46;
+  text-decoration: underline;
+}

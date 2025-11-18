@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Admin Dashboard — VoteBright</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- SheetJS for Excel export -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+  <header class="site-header admin-header">
+    <div class="container header-inner">
+      <div class="brand"><h1>VoteBright Admin</h1></div>
+<nav>
+  <div class="nav-left">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="nominees.html">Nominees</a>
+  </div>
+  <div class="nav-right" id="user-nav">
+    <a href="register.html">Register</a>
+    <a href="login.html">Login</a>
+    <a href="admin.html">Admin</a>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+  <main class="container admin-main">
+    <section id="login-section" class="card auth-panel">
+      <h2>Admin Login</h2>
+      <input id="adminName" placeholder="Admin name" />
+      <input id="adminPassword" type="password" placeholder="Password" />
+      <div class="form-actions">
+        <button onclick="loginAdmin()" class="btn btn-primary">Login</button>
+      </div>
+      <p id="loginMessage" style="color:#c00"></p>
+    </section>
+
+    <section id="dashboard" style="display:none;">
+      <div class="admin-top">
+        <div>
+          <button onclick="exportUsers()" class="btn">Export Users (.xlsx)</button>
+          <button onclick="exportNominees()" class="btn">Export Nominees (.xlsx)</button>
+        </div>
+      </div>
+
+      <div class="admin-grid">
+        <div class="panel card">
+          <h3>Pending Nominees</h3>
+          <table id="pendingNomineesTable" class="table">
+            <thead><tr><th>Name</th><th>Subjects</th><th>Phone</th><th>Reason</th><th>Actions</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <div class="panel card">
+          <h3>Approved Nominees (by votes)</h3>
+          <table id="nomineeTable" class="table">
+            <thead><tr><th>ID</th><th>Name</th><th>Subjects</th><th>Phone</th><th>Reason</th><th>Votes</th><th>Action</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <div class="panel card">
+          <h3>Registered Users</h3>
+          <table id="userTable" class="table">
+            <thead><tr><th>Name</th><th>Email</th><th>Action</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><p>© 2025 VoteBright</p></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
