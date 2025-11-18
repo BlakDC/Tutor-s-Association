@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Register — VoteBright</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand"><h1>VoteBright</h1></div>
+<nav>
+  <div class="nav-left">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="nominees.html">Nominees</a>
+  </div>
+  <div class="nav-right" id="user-nav">
+    <a href="register.html">Register</a>
+    <a href="login.html">Login</a>
+    <a href="admin.html">Admin</a>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+  <main class="container auth-page">
+    <div class="auth-panel card">
+      <h2>Create an account</h2>
+      <form id="register-form" class="form">
+        <input id="reg-first-name" placeholder="First name" required />
+        <input id="reg-last-name" placeholder="Last name" required />
+        <input id="reg-email" type="email" placeholder="Email address" required />
+        <input id="reg-confirm-email" type="email" placeholder="Confirm email" required />
+        <input id="reg-password" type="password" placeholder="Password" required />
+        <input id="reg-confirm-password" type="password" placeholder="Confirm password" required />
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Register</button>
+          <a href="login.html" class="btn btn-ghost">Already have account</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="container"><p>© 2025 VoteBright</p></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
